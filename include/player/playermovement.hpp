@@ -1,4 +1,6 @@
-#pragma once
+#ifndef PLAYER_MOVEMENT_H_
+
+#define PLAYER_MOVEMENT_H_
 
 #include "core/gameobject.hpp"
 #include "core/transform2D.hpp"
@@ -29,3 +31,5 @@ namespace Player
         Core::Component *Parse(json &data) override;
     };
 }
+
+#endif

@@ -1,10 +1,10 @@
 ifeq ($(OS), Windows_NT)
 CC = g++
-CFLAGS = -Wall -Wextra -ggdb -pedantic -lraylib -lopengl32 -lgdi32 -lwinmm -lm -static
+CFLAGS = -Wall -Wextra -ggdb -pedantic -lraylib -lopengl32 -lgdi32 -lwinmm -lm -static -std=c++17
 LIBS = -Lvendor/raylib/lib/windows
 else
 CC = g++
-CFLAGS = -Wall -Wextra -ggdb -pedantic -lraylib -lGL -lm -lpthread -ldl -lX11
+CFLAGS = -Wall -Wextra -ggdb -pedantic -lraylib -lGL -lm -lpthread -ldl -lX11 -std=c++17
 LIBS = -Lvendor/raylib/lib/linux
 endif
 

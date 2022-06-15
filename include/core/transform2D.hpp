@@ -1,4 +1,6 @@
-#pragma once
+#ifndef TRANSFORM2D_H_
+
+#define TRANSFORM2D_H_
 
 #include "core/gameobject.hpp"
 #include "raylib.h"
@@ -39,3 +41,5 @@ namespace Core
         Component *Parse(json &data) override;
     };
 }
+
+#endif

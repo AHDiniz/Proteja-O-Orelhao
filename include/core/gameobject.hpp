@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GAMEOBJ_H_
+
+#define GAMEOBJ_H_
 
 #include <vector>
 #include <string>
@@ -67,3 +69,5 @@ namespace Core
         virtual Component *Parse(json &data) = 0;
     };
 }
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef CIRCLE_RENDERER_H_
+
+#define CIRCLE_RENDERER_H_
 
 #include "core/gameobject.hpp"
 #include "raylib.h"
@@ -32,3 +34,5 @@ namespace Rendering
         Core::Component *Parse(json &data) override;
     };
 }
+
+#endif

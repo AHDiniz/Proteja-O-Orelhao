@@ -1,4 +1,6 @@
-#pragma once
+#ifndef GAME_H_
+
+#define GAME_H_
 
 #include <vector>
 #include <string>
@@ -32,3 +34,5 @@ namespace Core
         std::vector<Scene*> m_Scenes;
     };
 }
+
+#endif

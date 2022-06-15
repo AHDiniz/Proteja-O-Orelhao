@@ -5,9 +5,10 @@ namespace Physics
 {
     void Collider::OnCollision(Collider *other)
     {
-        for (std::function<void(Collider*)> event : m_OnColEvents)
+        for (CollisionEvent event : m_OnColEvents)
         {
-            event(other);
+            std::function<void(Collider*)> f = *((std::function<void(Collider*)>*)(&event));
+            f(other);
         }
     }
 

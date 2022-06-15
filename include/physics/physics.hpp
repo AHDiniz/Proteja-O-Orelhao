@@ -1,11 +1,15 @@
-#pragma once
+#ifndef PHYSICS_H_
+
+#define PHYSICS_H_
 
 #include "core/gameobject.hpp"
 #include "core/transform2D.hpp"
 #include <functional>
+#include <vector>
 
 namespace Physics
 {
+    class Collider;
     using CollisionEvent = std::function<void(Collider*)>;
 
     struct CollisionPoints
@@ -181,3 +185,5 @@ namespace Physics
     CollisionPoints TestCircleCircle(CircleCollider *a, CircleCollider *b);
     CollisionPoints TestRectRect(RectangleCollider *a, RectangleCollider *b);
 }
+
+#endif
