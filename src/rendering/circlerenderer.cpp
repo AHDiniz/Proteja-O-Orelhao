@@ -7,7 +7,6 @@ namespace Rendering
         m_Color = color;
         m_Radius = radius;
         m_Transform = nullptr;
-        m_Type = "CircleRenderer";
     }
 
     void CircleRenderer::Start()

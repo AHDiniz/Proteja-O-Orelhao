@@ -6,7 +6,6 @@ namespace Combat
     Damager::Damager(int damage)
     {
         m_Damage = damage;
-        m_Type = "Damager";
     }
 
     void Damager::Start()

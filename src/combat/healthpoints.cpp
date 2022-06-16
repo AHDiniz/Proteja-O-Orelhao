@@ -7,7 +7,6 @@ namespace Combat
     {
         m_MaxHealth = maxHealth;
         m_CurrentHealth = 0;
-        m_Type = "HealthPoints";
     }
 
     void HealthPoints::Hit(int damage)

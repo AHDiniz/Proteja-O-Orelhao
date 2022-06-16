@@ -5,7 +5,6 @@ namespace Player
     PlayerMovement::PlayerMovement(float walkSpeed)
     {
         m_WalkSpeed = walkSpeed;
-        m_Type = "PlayerMovement";
     }
 
     Core::Component *PlayerMovementParser::Parse(json &data)

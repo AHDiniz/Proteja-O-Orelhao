@@ -5,6 +5,7 @@
 #include "core/core.hpp"
 #include "rendering/circlerenderer.hpp"
 #include "player/playermovement.hpp"
+#include "physics/physics.hpp"
 
 int main(void)
 {
@@ -19,11 +20,17 @@ int main(void)
     Core::Transform2DParser transform2DParser;
     Rendering::CircleRendererParser circleRendererParser;
     Player::PlayerMovementParser playerMovementParser;
+    Physics::CircleColliderParser circleRendererParser;
+    Physics::RectangleColliderParser rectRendererParser;
+    Physics::RigidbodyParser rigidbodyParser;
 
     std::map<std::string, Core::IComponentParser*> parsers;
     parsers["Transform2D"] = &transform2DParser;
     parsers["CircleRenderer"] = &circleRendererParser;
     parsers["PlayerMovement"] = &playerMovementParser;
+    parsers["CircleRenderer"] = &circleRendererParser;
+    parsers["RectangleCollider"] = &rectRendererParser;
+    parsers["Rigidbody"] = &rigidbodyParser;
 
     Core::Scene testScene("assets/scenes/test.json", parsers);
 
