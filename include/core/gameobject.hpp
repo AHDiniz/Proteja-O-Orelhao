@@ -49,7 +49,18 @@ namespace Core
         inline void SetName(std::string name) { m_Name = name; }
 
         inline void AddComponent(Component *c) { c->m_GameObject = this; m_Components.push_back(c); }
-        Component *GetComponent(std::string typeName);
+
+        template<typename T>
+        T *GetComponent()
+        {
+            for (Component *c : m_Components)
+            {
+                T *t = dynamic_cast<T*>(c);
+                if (t != nullptr)
+                    return t;
+            }
+            return nullptr;
+        }
 
         void Start();
         void Update();

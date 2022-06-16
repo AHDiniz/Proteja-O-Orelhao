@@ -164,7 +164,7 @@ namespace Physics
             body->SetVelocity(vel);
             
             Core::Transform2D *t =
-                static_cast<Core::Transform2D *>(body->GetGameObject()->GetComponent("Transform2D"));
+                static_cast<Core::Transform2D *>(body->GetGameObject()->GetComponent<Core::Transform2D>());
             
             Vector2 pos = Vector2Add(t->Position(), Vector2Scale(vel, dt));
             t->SetPosition(pos);
@@ -185,8 +185,8 @@ namespace Physics
         Core::GameObject *ag = a->GetGameObject();
         Core::GameObject *bg = b->GetGameObject();
 
-        Core::Transform2D *at = static_cast<Core::Transform2D*>(ag->GetComponent("Transform2D"));
-        Core::Transform2D *bt = static_cast<Core::Transform2D*>(bg->GetComponent("Transform2D"));
+        Core::Transform2D *at = static_cast<Core::Transform2D*>(ag->GetComponent<Core::Transform2D>());
+        Core::Transform2D *bt = static_cast<Core::Transform2D*>(bg->GetComponent<Core::Transform2D>());
 
         Vector2 dist = Vector2Subtract(bt->Position(), at->Position());
 

@@ -17,7 +17,7 @@ namespace Player
 
     void PlayerMovement::Start()
     {
-        m_Transform = static_cast<Core::Transform2D*>(m_GameObject->GetComponent("Transform2D"));
+        m_Transform = static_cast<Core::Transform2D*>(m_GameObject->GetComponent<Core::Transform2D>());
     }
 
     void PlayerMovement::Update()

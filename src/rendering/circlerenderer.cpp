@@ -12,7 +12,7 @@ namespace Rendering
 
     void CircleRenderer::Start()
     {
-        Core::Component *c = m_GameObject->GetComponent("Transform2D");
+        Core::Component *c = m_GameObject->GetComponent<Core::Transform2D>();
         m_Transform = static_cast<Core::Transform2D *>(c);
     }
 

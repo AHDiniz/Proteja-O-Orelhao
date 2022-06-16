@@ -10,18 +10,6 @@ namespace Core
         }
     }
 
-    Component *GameObject::GetComponent(std::string typeName)
-    {
-        for (Component *c : m_Components)
-        {
-            if (c->Type() == typeName)
-            {
-                return c;
-            }
-        }
-        return nullptr;
-    }
-
     void GameObject::Start()
     {
         for (Component *c : m_Components)
